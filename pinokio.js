@@ -22,6 +22,7 @@ module.exports = {
     }
     if (installing) {
       return [{
+        default: true,
         icon: "fa-solid fa-plug",
         text: "Installing",
         href: "install.js",
@@ -30,6 +31,7 @@ module.exports = {
       if (running) {
         let local = kernel.memory.local[path.resolve(__dirname, "start.js")]
         let o = [{
+          default: true,
           icon: "fa-solid fa-rocket",
           text: "Open Web UI",
           href: local.url,
@@ -41,6 +43,7 @@ module.exports = {
         return o
       } else {
         let o = [{
+          default: true,
           icon: "fa-solid fa-power-off",
           text: "Start",
           href: "start.js",
@@ -78,6 +81,7 @@ module.exports = {
       }
     } else {
       return [{
+        default: true,
         icon: "fa-solid fa-plug",
         text: "Install",
         href: "install.js",
