@@ -6,7 +6,7 @@ module.exports = async (kernel) => {
       method: "shell.run",
       params: {
         message: [
-          "conda install -y -c conda-forge",
+          "conda install -y -c conda-forge pnpm",
           "git clone https://github.com/lobehub/lobe-chat app",
         ]
       }
