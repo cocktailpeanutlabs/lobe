@@ -1,7 +1,4 @@
-const config = require("./config.js")
-const pre = require("./pre.js")
-module.exports = async (kernel) => {
-  let script = {
+module.exports = {
     run: [{
       method: "shell.run",
       params: {
@@ -13,6 +10,9 @@ module.exports = async (kernel) => {
     }, {
       method: "shell.run",
       params: {
+        env: {
+          "NODE_OPTIONS": "--max-old-space-size=8192"
+        },
         path: "app",
         message: [
           "pnpm install",
@@ -24,11 +24,7 @@ module.exports = async (kernel) => {
       params: {
         html: "Click the 'start' tab to get started!"
       }
-    }]
-  }
-  let pre_command = pre(config, kernel)
-  if (pre_command) {
-    script.run[1].params.message = [pre_command].concat(script.run[1].params.message)
-  }
-  return script
+    }
+  ]
 }
+  
