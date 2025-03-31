@@ -1,5 +1,4 @@
-module.exports = async (kernel) => {
-  let script = {
+module.exports = {
     daemon: true,
     run: [{
       method: "shell.run",
@@ -18,13 +17,6 @@ module.exports = async (kernel) => {
       "params": {
         "url": "{{input.event[0]}}"
       }
-//    }, {
-//      "method": "proxy.start",
-//      "params": {
-//        "uri": "{{local.url}}",
-//        "name": "Local Sharing"
-//      }
-    }]
-  }
-  return script
+    }
+  ]
 }
