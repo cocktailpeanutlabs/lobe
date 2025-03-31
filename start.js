@@ -10,7 +10,10 @@ module.exports = {
         message: [
           "pnpm start"
         ],
-        on: [{ "event": "/http:\/\/[^ ]+/", "done": true }]
+        on: [{
+          "event": "/http:\/\/[^ ]+/",
+          "done": true
+        }]
       }
     }, {
       "method": "local.set",
