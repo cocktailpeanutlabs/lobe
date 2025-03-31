@@ -1,6 +1,6 @@
 const path = require('path')
 module.exports = {
-  version: "1.2",
+  version: "2.0",
   title: "Lobe Chat",
   description: "An open-source, modern-design ChatGPT/LLMs UI/Framework. Supports speech-synthesis, multi-modal, and extensible (function call) plugin system. https://github.com/lobehub/lobe-chat",
   icon: "icon.png",
